@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1B1B1E;
+    color: white;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.instructions{
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #016FB9;
+}
+
+header,form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border : none;
+    background: white;
+}
+
+
+
+.suggestion_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.suggestion_list{
+    min-width: 30%;
+    list-style: none;
+}
+
+.suggestion{
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    display: flex;
+    font-size: 1.5 rem;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+ }
+
+ .hint{
+     color: red;
+     font-weight: bold;
+     text-transform: uppercase;
+     text-align: center;
+ }
+
+ .deleteButton{
+     background: #EE6352;
+     color: white;
+     border: none;
+     padding: 1rem;
+ }
+
+
+ .test_button{
+    padding-top: 50px;
+    align-items: center;
+    display: none;
+    justify-content: center;
+ }
+
+ .a-b_button{
+    background: #62A87C;
+    padding: 10px;
+    border: solid white 3px;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+ }
+
+
+ .bottom{
+     text-align: center;
+     padding-top: 100px;
+     font-size: 2vh;
+ }
+
+
+ /* animations  */
+ .moveB{
+     transform: translateX(10rem);
+     opacity: 0;
+ }
+
+ .movebackB{
+    transform: translateX( 0rem);
+    opacity: 1; 
+ }
+
+ .moveA{
+    transform: translateX(-10rem);
+    opacity: 0; 
+ }
+
+ .movebackA{
+    transform: translateX( 0rem);
+    opacity: 1; 
+ }
+
+
+@keyframes animatetop {
+    from {top: -400px; opacity: 0}
+    to {top: 400; opacity: 1}
+  }
+
+@keyframes fadeOut{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Modal */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    display: none;
+    position: relative;
+    margin: auto;
+    margin-top: -400px;
+    background-color: #2E2836;
+    color: rgb(255, 255, 255);
+    border: 3px solid white;
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 100px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal-header {
+    text-align: center;
+    padding: 2px 16px;
+    background-color: #2E2836;
+    color: white;
+  }
+  
+  .modal-body {
+      height: 400px;
+      padding: 2px 16px;
+      text-align: center;
+      display: block;
+   }
+
+
+   .modal-body p{
+       font-size: 2rem;
+   }
+
+   .option-a{
+       float: left;
+       font-size: 4vw;
+       margin-top: 100px;
+       transition: all 1s ease;
+   }
+
+   .option-a_btn{
+       padding: 0 20px 0px 20px;
+       border: solid white 3px;
+       float: left;
+       font-size: 100px;
+       position: absolute;
+       top: 250px;
+       left: 50px;
+       background-color: #D9594C;
+       color:white;
+       border-radius: 5%;
+   }
+
+    .or{
+       margin-top: 100px;
+   }
+
+   .option-b{
+       float: right;
+       font-size: 4vw;
+       margin-top: -40px;
+       transition: all 1s ease;
+   }
+   .option-b_btn{
+       float: right;
+       font-size: 100px;
+       padding: 0 20px 0px 20px;
+       border-radius: 5%;
+       border: solid white 3px;
+       position: absolute;
+       top: 250px;
+       right: 50px;
+       background-color: #016FB9;
+       color: white;
+   }
+
+   .modal-body-done{
+    height: 400px;
+    padding: 2px 16px;
+    text-align: center;
+    display: none;
+    }
+
+    .option_answer{
+        text-transform: uppercase;
+        font-size: 5vw;
+        margin-top: 100px;
+        animation: fadeOut;
+        animation-duration: 5s;
+    }
+
+    .exit_btn{
+       font-size: 50px;
+       color:white;
+       background-color: #D9594C;
+       border: solid white 2px;
+       padding: 5px;
+       margin-top: 20px;
+       border-radius: 5%;
+    }
+
+    .exit_btn a{
+        text-decoration: none;
+        color: white;
+    }
+
+   @media only screen and (max-width: 750px) {
+    .option-a_btn {
+        font-size: 7vw;
+        position: absolute;
+        left: 10px;
+        top: 350px;
+    }
+
+    .option-b_btn{
+        font-size: 7vw;
+        position: absolute;
+        right: 10px;
+        top: 350px;
+    }
+
+    .or{
+        font-size: 5vw;
+    }
+  }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-B suggestion test</title>
+    <link rel="stylesheet" href="CSS/style.css"/>
+    <!-- fonts  -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>A-B suggestion test</h1>
+        </header>
+        <p class="instructions">Please enter items you wish to compare. Press "Run Test" when you're ready!</p>
+        <form>
+            <input type="text",
+            class="suggestion_input", placeholder="What did you want to do?">
+            <button class="add_button" type="submit">
+                +
+            </button>
+        </form>
+        <div class="hint">
+            <p>(You will need 2 or more items in order to test!)</p>
+        </div>
+        <div class="suggestion_container">
+            <ul class="suggestion_list"></ul>
+        </div>
+        <div class="test_button">
+            <button class="a-b_button" type="submit">Run Test!</button>
+        </div>
+        <!-- Modal -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Please select between A or B</h2>
+            </div>
+            <div class="modal-body">
+                <p>Would you rather :</p>
+                <h2 class="option-a"></h2>
+                <button class="option-a_btn">A</button>
+                <p class="or"> OR </p>
+                <h2 class="option-b"></h2>
+                <button class="option-b_btn">B</button>
+            </div>
+            <div class="modal-body-done">
+                <h2>You chose to:</h2>
+                <h1 class="option_answer"></h1>
+                <button class="exit_btn"><a href="http://127.0.0.1:5500/">EXIT</a></button>
+            </div>
+        </div>
+        <footer>
+            <div class="bottom">
+                <h2>Adam Arceo Designs</h2>
+            </div>
+        </footer>  
+    </div>  
+</body>
+<script src="js/main.JS"></script>
+</html>
